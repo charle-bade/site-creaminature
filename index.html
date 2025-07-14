@@ -109,7 +109,7 @@
                                 <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Livraison en 48h</li>
                             </ul>
                             <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full">Commander</a>
+                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Miniature Unique">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -126,7 +126,7 @@
                                 <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Livraison en 72h</li>
                             </ul>
                             <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full">Commander</a>
+                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Pack Découverte">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -144,7 +144,7 @@
                                 <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Livraison prioritaire</li>
                             </ul>
                             <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full">Commander</a>
+                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Pack Croissance">Commander</a>
                             </div>
                         </div>
                     </div>
@@ -161,7 +161,7 @@
                                 <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Conseils A/B Testing</li>
                             </ul>
                             <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full">Discutons-en</a>
+                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Abonnement Créateur">Discutons-en</a>
                             </div>
                         </div>
                     </div>
@@ -178,7 +178,7 @@
                                 <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Fichiers sources inclus</li>
                             </ul>
                             <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full">Discutons-en</a>
+                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Abonnement Pro">Discutons-en</a>
                             </div>
                         </div>
                     </div>
@@ -195,7 +195,7 @@
                                 <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Analyse de performance</li>
                             </ul>
                             <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full">Discutons-en</a>
+                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Abonnement Agence">Discutons-en</a>
                             </div>
                         </div>
                     </div>
@@ -237,6 +237,20 @@
                 <div class="max-w-2xl mx-auto">
                     <!-- FORMULAIRE MIS A JOUR -->
                     <form action="https://formspree.io/f/xyzpgnab" method="POST" class="space-y-6">
+                        <!-- NOUVEAU CHAMP DE SÉLECTION -->
+                        <div>
+                            <label for="pack-select" class="block text-sm font-medium text-gray-300 mb-1">Offre choisie</label>
+                            <select id="pack-select" name="Offre choisie" required class="input-field">
+                                <option value="" disabled selected>Sélectionnez une offre...</option>
+                                <option value="Miniature Unique">Miniature Unique - 15€</option>
+                                <option value="Pack Découverte">Pack Découverte - 40€</option>
+                                <option value="Pack Croissance">Pack Croissance - 65€</option>
+                                <option value="Abonnement Créateur">Abonnement Créateur - 125€/mois</option>
+                                <option value="Abonnement Pro">Abonnement Pro - 250€/mois</option>
+                                <option value="Abonnement Agence">Abonnement Agence - 375€/mois</option>
+                            </select>
+                        </div>
+                        <!-- FIN DU NOUVEAU CHAMP -->
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Nom</label>
                             <input type="text" id="name" name="name" required class="input-field">
@@ -341,7 +355,16 @@
             });
         });
 
-        // LE SCRIPT DE FORMULAIRE A ETE SUPPRIME POUR PERMETTRE A FORMSPREE DE FONCTIONNER
+        // NOUVEAU SCRIPT POUR LA SÉLECTION DES OFFRES
+        document.querySelectorAll('.order-button').forEach(button => {
+            button.addEventListener('click', function() {
+                const packName = this.dataset.pack;
+                const selectDropdown = document.getElementById('pack-select');
+                if (selectDropdown) {
+                    selectDropdown.value = packName;
+                }
+            });
+        });
     </script>
 
 </body>
