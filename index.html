@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Service professionnel de création de miniatures YouTube pour augmenter vos vues et votre taux de clics. Packs adaptés à tous les créateurs de contenu.">
     <title>Votre Nom | Service de Création de Miniatures YouTube</title>
     
     <!-- Tailwind CSS -->
@@ -44,8 +45,15 @@
         .btn-secondary {
             @apply bg-gray-700 hover:bg-gray-600;
         }
+        /* CORRECTION FINALE: Fond blanc et texte noir pour une lisibilité maximale */
         .input-field {
-            @apply w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500;
+            @apply w-full bg-white border border-gray-400 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-indigo-500;
+        }
+        /* Styles for FAQ accordion */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
         }
     </style>
 </head>
@@ -57,9 +65,11 @@
             <a href="#" class="text-2xl font-bold text-white">
                 <i class="fa-solid fa-wand-magic-sparkles text-indigo-400"></i> CréaMiniature
             </a>
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden md:flex items-center space-x-6">
                 <a href="#services" class="text-gray-300 hover:text-white transition-colors duration-300">Services</a>
                 <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors duration-300">Portfolio</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors duration-300">Témoignages</a>
+                <a href="#faq" class="text-gray-300 hover:text-white transition-colors duration-300">FAQ</a>
                 <a href="#contact" class="btn btn-primary">Contactez-moi</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-white">
@@ -70,6 +80,8 @@
         <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
             <a href="#services" class="block py-2 text-gray-300 hover:text-white">Services</a>
             <a href="#portfolio" class="block py-2 text-gray-300 hover:text-white">Portfolio</a>
+            <a href="#testimonials" class="block py-2 text-gray-300 hover:text-white">Témoignages</a>
+            <a href="#faq" class="block py-2 text-gray-300 hover:text-white">FAQ</a>
             <a href="#contact" class="block mt-2 py-2 text-center btn btn-primary w-full">Contactez-moi</a>
         </div>
     </header>
@@ -209,22 +221,116 @@
                 <h2 class="section-title">Mon Portfolio</h2>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                     <div class="card group">
-                        <img src="MINIATURE 2.png" alt="Miniature YouTube pour le gaming" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                        <img src="MINIATURE 2.png" alt="Exemple de miniature 1" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
                     </div>
                     <div class="card group">
-                        <img src="SEO-Facile--5-Choses-à-Faire-Pour-Devenir-Visible-Rapidementa.jpg"Miniature YouTube pour le business et la finance" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                        <img src="Marie-Lou-Sciuba.jpg" alt="Exemple de miniature 2" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
                     </div>
                     <div class="card group">
-                        <img src="royaume-du-kongo17.jpg"Miniature YouTube pour un vlog de voyage" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                        <img src="Pourquoi-j’ai-quitté-la-France1.jpg" alt="Exemple de miniature 3" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
                     </div>
                     <div class="card group">
-                        <img src="Pourquoi-j’ai-quitté-la-France1.jpg" alt="Miniature YouTube pour un tutoriel" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                        <img src="SEO-Facile--5-Choses-à-Faire-Pour-Devenir-Visible-Rapidementa.jpg" alt="Exemple de miniature 4" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
                     </div>
                     <div class="card group">
-                        <img src="Marie-Lou-Sciuba.jpg" alt="Miniature YouTube pour une recette de cuisine" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                        <img src="royaume-du-kongo17.jpg" alt="Exemple de miniature 5" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
                     </div>
                     <div class="card group">
-                        <img src="voitute-audi-V1.jpg" alt="Miniature YouTube pour le sport et le fitness" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                        <img src="https://placehold.co/600x400/d32f2f/ffffff?text=VOTRE+MINIATURE+ICI&font=montserrat" alt="Exemple de miniature 6" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION TÉMOIGNAGES MISE À JOUR -->
+        <section id="testimonials" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Ce que disent mes clients</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Testimonial Card 1 -->
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <i class="fas fa-quote-left text-indigo-400 text-2xl mb-4"></i>
+                        <p class="text-gray-300 mb-6">“Commande rapide, répondant à ma demande, merci.”</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/40x40/E5E7EB/374151?text=S" alt="Avatar client" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-white">Shiatsushi</h4>
+                                <p class="text-sm text-gray-400">Client satisfait</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 2 -->
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <i class="fas fa-quote-left text-indigo-400 text-2xl mb-4"></i>
+                        <p class="text-gray-300 mb-6">“Super travail je recommande !”</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/40x40/E5E7EB/374151?text=P" alt="Avatar client" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-white">Pierre6</h4>
+                                <p class="text-sm text-gray-400">Client satisfait</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Testimonial Card 3 -->
+                    <div class="bg-gray-800 p-8 rounded-lg">
+                        <i class="fas fa-quote-left text-indigo-400 text-2xl mb-4"></i>
+                        <p class="text-gray-300 mb-6">“Excellent comme d’habitude 👌🏼”</p>
+                        <div class="flex items-center">
+                            <img src="https://placehold.co/40x40/E5E7EB/374151?text=H" alt="Avatar client" class="w-12 h-12 rounded-full mr-4">
+                            <div>
+                                <h4 class="font-bold text-white">HananeHNweek</h4>
+                                <p class="text-sm text-gray-400">Cliente satisfaite</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOUVELLE SECTION: FAQ -->
+        <section id="faq" class="py-20">
+            <div class="container mx-auto px-6 max-w-3xl">
+                <h2 class="section-title">Questions Fréquemment Posées</h2>
+                <div class="space-y-4">
+                    <!-- FAQ Item 1 -->
+                    <div class="bg-gray-800 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">Quel est le processus de commande ?</span>
+                            <i class="fas fa-plus transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-400">
+                            <p>C'est très simple ! Choisissez une offre qui vous convient, remplissez le formulaire de contact en décrivant votre besoin (sujet de la vidéo, idées, couleurs, etc.). Je vous recontacterai ensuite par e-mail pour finaliser les détails avant de commencer la création.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 2 -->
+                    <div class="bg-gray-800 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">En combien de temps ma miniature sera-t-elle livrée ?</span>
+                            <i class="fas fa-plus transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-400">
+                            <p>Les délais de livraison varient selon l'offre choisie. Pour une miniature unique, le délai est généralement de 48h. Les packs et abonnements bénéficient de délais adaptés et souvent prioritaires. Les détails sont indiqués dans chaque offre.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 3 -->
+                    <div class="bg-gray-800 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">Puis-je demander des modifications ?</span>
+                            <i class="fas fa-plus transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-400">
+                            <p>Oui, bien sûr ! La plupart des offres incluent un certain nombre de révisions pour s'assurer que le résultat final vous convienne parfaitement. Le "Pack Croissance" et les abonnements offrent même des révisions illimitées pour votre tranquillité d'esprit.</p>
+                        </div>
+                    </div>
+                    <!-- FAQ Item 4 -->
+                    <div class="bg-gray-800 rounded-lg">
+                        <button class="faq-question w-full flex justify-between items-center text-left p-6">
+                            <span class="text-lg font-semibold">Quels sont les moyens de paiement acceptés ?</span>
+                            <i class="fas fa-plus transition-transform duration-300"></i>
+                        </button>
+                        <div class="faq-answer px-6 pb-6 text-gray-400">
+                            <p>J'accepte les paiements par carte bancaire (Visa, Mastercard) via une plateforme sécurisée, ainsi que les paiements par PayPal. Une fois la commande confirmée, je vous enverrai un lien de paiement sécurisé.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -235,13 +341,11 @@
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Prêt à booster vos vues ?</h2>
                 <div class="max-w-2xl mx-auto">
-                    <!-- FORMULAIRE MIS A JOUR -->
                     <form action="https://formspree.io/f/xyzpgnab" method="POST" class="space-y-6">
-                        <!-- NOUVEAU CHAMP DE SÉLECTION -->
                         <div>
-                            <label for="pack-select" class="block text-sm font-medium text-gray-300 mb-1">Offre choisie</label>
-                            <select id="pack-select" name="Offre choisie" required class="input-field">
-                                <option value="" disabled selected>Sélectionnez une offre...</option>
+                            <label for="pack-select" class="block text-sm font-medium text-gray-300 mb-1">Offre demandée</label>
+                            <select id="pack-select" name="Pack" required class="input-field">
+                                <option value="" disabled>Sélectionnez une offre...</option>
                                 <option value="Miniature Unique">Miniature Unique - 15€</option>
                                 <option value="Pack Découverte">Pack Découverte - 40€</option>
                                 <option value="Pack Croissance">Pack Croissance - 65€</option>
@@ -250,24 +354,23 @@
                                 <option value="Abonnement Agence">Abonnement Agence - 375€/mois</option>
                             </select>
                         </div>
-                        <!-- FIN DU NOUVEAU CHAMP -->
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Nom</label>
                             <input type="text" id="name" name="name" required class="input-field">
                         </div>
                         <div>
                             <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                            <input type="email" id="email" name="email" required class="input-field">
+                            <input type="email" id="email" name="_replyto" required class="input-field">
                         </div>
                         <div>
-                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Votre message (décrivez votre besoin)</label>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Votre message</label>
                             <textarea id="message" name="message" rows="4" required class="input-field"></textarea>
                         </div>
                         <div class="text-center">
                             <button type="submit" class="btn btn-primary text-lg w-full md:w-auto">Envoyer ma demande</button>
                         </div>
                     </form>
-                    <!-- NOUVEL AJOUT: Bouton WhatsApp -->
+                    
                     <div class="my-6 flex items-center justify-center">
                         <div class="flex-grow border-t border-gray-600"></div>
                         <span class="flex-shrink mx-4 text-gray-400">ou</span>
@@ -277,7 +380,6 @@
                         <i class="fab fa-whatsapp text-2xl mr-3"></i>
                         Contactez-moi sur WhatsApp
                     </a>
-                    <!-- FIN DE L'AJOUT -->
                 </div>
             </div>
         </section>
@@ -311,11 +413,9 @@
                 <a href="#" class="hover:text-white transition-colors"><i class="fab fa-youtube text-2xl"></i></a>
                 <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
                 <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
-                <!-- NOUVEL AJOUT: Icône WhatsApp -->
                 <a href="https://wa.me/2290169284952" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors" aria-label="WhatsApp">
                     <i class="fab fa-whatsapp text-2xl"></i>
                 </a>
-                <!-- FIN DE L'AJOUT -->
             </div>
             
             <p>&copy; 2024 CréaMiniature. Tous droits réservés.</p>
@@ -336,15 +436,11 @@
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 const href = this.getAttribute('href');
-                // Ensure the href is more than just a '#' to prevent errors
                 if (href && href.length > 1) {
                     e.preventDefault();
-                    
-                    // Close mobile menu on link click
                     if (!mobileMenu.classList.contains('hidden')) {
                          mobileMenu.classList.add('hidden');
                     }
-                    
                     const targetElement = document.querySelector(href);
                     if (targetElement) {
                         targetElement.scrollIntoView({
@@ -355,14 +451,37 @@
             });
         });
 
-        // NOUVEAU SCRIPT POUR LA SÉLECTION DES OFFRES
+        // SCRIPT POUR LA SÉLECTION DES OFFRES
         document.querySelectorAll('.order-button').forEach(button => {
             button.addEventListener('click', function() {
                 const packName = this.dataset.pack;
                 const selectDropdown = document.getElementById('pack-select');
                 if (selectDropdown) {
-                    selectDropdown.value = packName;
+                    for (let i = 0; i < selectDropdown.options.length; i++) {
+                        if (selectDropdown.options[i].value === packName) {
+                            selectDropdown.selectedIndex = i;
+                            break;
+                        }
+                    }
                 }
+            });
+        });
+
+        // NOUVEAU SCRIPT POUR L'ACCORDÉON FAQ
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('i');
+
+                if (answer.style.maxHeight) {
+                    answer.style.maxHeight = null;
+                    icon.classList.remove('fa-minus');
+                    icon.classList.add('fa-plus');
+                } else {
+                    answer.style.maxHeight = answer.scrollHeight + "px";
+                    icon.classList.remove('fa-plus');
+                    icon.classList.add('fa-minus');
+                } 
             });
         });
     </script>
