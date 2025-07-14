@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Votre Nom | Service de Création de Miniatures YouTube</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111827; /* Dark background */
+            color: #F3F4F6; /* Light text */
+        }
+        .hero-gradient {
+            background: linear-gradient(90deg, #4F46E5, #A855F7);
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-center mb-12;
+        }
+        .card {
+            @apply bg-gray-800 rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 flex flex-col;
+        }
+        .card-content {
+            @apply p-8 flex-grow flex flex-col;
+        }
+        .btn {
+            @apply px-6 py-3 rounded-lg font-semibold text-white transition-transform duration-300;
+        }
+        .btn-primary {
+            @apply bg-indigo-600 hover:bg-indigo-700;
+        }
+        .btn-secondary {
+            @apply bg-gray-700 hover:bg-gray-600;
+        }
+        .input-field {
+            @apply w-full bg-gray-700 border border-gray-600 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-indigo-500;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white">
+                <i class="fa-solid fa-wand-magic-sparkles text-indigo-400"></i> CréaMiniature
+            </a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-gray-300 hover:text-white transition-colors duration-300">Services</a>
+                <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors duration-300">Portfolio</a>
+                <a href="#contact" class="btn btn-primary">Contactez-moi</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#services" class="block py-2 text-gray-300 hover:text-white">Services</a>
+            <a href="#portfolio" class="block py-2 text-gray-300 hover:text-white">Portfolio</a>
+            <a href="#contact" class="block mt-2 py-2 text-center btn btn-primary w-full">Contactez-moi</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-20 md:py-32 text-center">
+            <div class="container mx-auto px-6">
+                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                    Des Miniatures YouTube Qui <span class="text-transparent bg-clip-text hero-gradient">Captivent</span>
+                </h1>
+                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
+                    Boostez vos vues et votre engagement avec des miniatures personnalisées, professionnelles et irrésistibles.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#services" class="btn btn-primary text-lg">Voir les offres</a>
+                    <a href="#portfolio" class="btn btn-secondary text-lg">Découvrir mon travail</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Mes Services</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Pricing Card 1 -->
+                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
+                        <div class="card-content">
+                            <i class="fas fa-star text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Miniature Unique</h3>
+                            <p class="text-4xl font-bold my-4">15€</p>
+                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>1 Miniature HD</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Design 100% personnalisé</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>2 révisions incluses</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Livraison en 48h</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="#contact" class="btn btn-primary w-full">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pricing Card 2 -->
+                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
+                         <div class="card-content">
+                            <i class="fas fa-lightbulb text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Pack Découverte</h3>
+                            <p class="text-4xl font-bold my-4">40€</p>
+                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>3 Miniatures HD</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Design 100% personnalisé</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>3 révisions incluses</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Livraison en 72h</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="#contact" class="btn btn-primary w-full">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pricing Card 3 (Recommended) -->
+                    <div class="card text-center border-2 border-indigo-500 scale-105 relative">
+                        <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-sm font-bold px-3 py-1 rounded-full">POPULAIRE</span>
+                        <div class="card-content">
+                            <i class="fas fa-rocket text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Pack Croissance</h3>
+                            <p class="text-4xl font-bold my-4">65€ <span class="text-lg text-gray-400 line-through">75€</span></p>
+                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>5 Miniatures HD</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Design 100% personnalisé</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Révisions illimitées</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Livraison prioritaire</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="#contact" class="btn btn-primary w-full">Commander</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pricing Card 4 -->
+                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
+                        <div class="card-content">
+                            <i class="fas fa-video text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Abonnement Créateur</h3>
+                            <p class="text-4xl font-bold my-4">125€<span class="text-lg text-gray-400">/mois</span></p>
+                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>10 Miniatures / mois</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Charte graphique dédiée</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Support prioritaire</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Conseils A/B Testing</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="#contact" class="btn btn-primary w-full">Discutons-en</a>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Pricing Card 5 -->
+                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
+                        <div class="card-content">
+                            <i class="fas fa-crown text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Abonnement Pro</h3>
+                            <p class="text-4xl font-bold my-4">250€<span class="text-lg text-gray-400">/mois</span></p>
+                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>20 Miniatures / mois</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Charte graphique dédiée</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Support VIP 24/7</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Fichiers sources inclus</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="#contact" class="btn btn-primary w-full">Discutons-en</a>
+                            </div>
+                        </div>
+                    </div>
+                     <!-- Pricing Card 6 -->
+                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
+                        <div class="card-content">
+                            <i class="fas fa-building text-4xl text-indigo-400 mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">Abonnement Agence</h3>
+                            <p class="text-4xl font-bold my-4">375€<span class="text-lg text-gray-400">/mois</span></p>
+                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>30 Miniatures / mois</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Charte graphique dédiée</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Support VIP 24/7</li>
+                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Analyse de performance</li>
+                            </ul>
+                            <div class="mt-auto">
+                                <a href="#contact" class="btn btn-primary w-full">Discutons-en</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Mon Portfolio</h2>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="card group">
+                        <img src="https://placehold.co/600x400/1F2937/FFFFFF?text=Miniature+Gaming" alt="Miniature YouTube pour le gaming" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="card group">
+                        <img src="https://placehold.co/600x400/4F46E5/FFFFFF?text=Miniature+Business" alt="Miniature YouTube pour le business" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="card group">
+                        <img src="https://placehold.co/600x400/D946EF/FFFFFF?text=Miniature+Vlog" alt="Miniature YouTube pour un vlog" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="card group">
+                        <img src="https://placehold.co/600x400/10B981/FFFFFF?text=Miniature+Tutoriel" alt="Miniature YouTube pour un tutoriel" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="card group">
+                        <img src="https://placehold.co/600x400/F59E0B/FFFFFF?text=Miniature+Cuisine" alt="Miniature YouTube pour la cuisine" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                    </div>
+                    <div class="card group">
+                        <img src="https://placehold.co/600x400/EF4444/FFFFFF?text=Miniature+Sport" alt="Miniature YouTube pour le sport" class="w-full h-auto object-cover group-hover:opacity-80 transition-opacity">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-gray-900">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Prêt à booster vos vues ?</h2>
+                <div class="max-w-2xl mx-auto">
+                    <form id="contact-form" class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Nom</label>
+                            <input type="text" id="name" name="name" required class="input-field">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required class="input-field">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Votre message (décrivez votre besoin)</label>
+                            <textarea id="message" name="message" rows="4" required class="input-field"></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary text-lg w-full md:w-auto">Envoyer ma demande</button>
+                        </div>
+                    </form>
+                    <div id="form-feedback" class="mt-6 text-center"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 border-t border-gray-700">
+        <div class="container mx-auto px-6 py-8 text-center text-gray-400">
+            
+            <!-- Payment Methods -->
+            <div class="mb-6">
+                <h4 class="text-lg font-semibold mb-3">Paiements Sécurisés</h4>
+                <div class="flex justify-center items-center space-x-4">
+                    <a href="https://www.visa.com" target="_blank" rel="noopener noreferrer" aria-label="Visa" class="hover:text-white transition-colors">
+                        <i class="fa-brands fa-cc-visa text-3xl"></i>
+                    </a>
+                    <a href="https://www.mastercard.com" target="_blank" rel="noopener noreferrer" aria-label="Mastercard" class="hover:text-white transition-colors">
+                        <i class="fa-brands fa-cc-mastercard text-3xl"></i>
+                    </a>
+                    <a href="https://www.paypal.com" target="_blank" rel="noopener noreferrer" aria-label="Paypal" class="hover:text-white transition-colors">
+                        <i class="fa-brands fa-cc-paypal text-3xl"></i>
+                    </a>
+                    <a href="https://www.stripe.com" target="_blank" rel="noopener noreferrer" aria-label="Stripe" class="hover:text-white transition-colors">
+                        <i class="fa-brands fa-cc-stripe text-3xl"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Social Links -->
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-youtube text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-twitter text-2xl"></i></a>
+                <a href="#" class="hover:text-white transition-colors"><i class="fab fa-linkedin text-2xl"></i></a>
+            </div>
+            
+            <p>&copy; 2024 CréaMiniature. Tous droits réservés.</p>
+            <p class="text-sm mt-2">Conçu pour vous aider à réussir sur YouTube.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                // Ensure the href is more than just a '#' to prevent errors
+                if (href && href.length > 1) {
+                    e.preventDefault();
+                    
+                    // Close mobile menu on link click
+                    if (!mobileMenu.classList.contains('hidden')) {
+                         mobileMenu.classList.add('hidden');
+                    }
+                    
+                    const targetElement = document.querySelector(href);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
+
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            formFeedback.innerHTML = '<p class="text-green-400">Merci ! Votre message a bien été envoyé. Je vous répondrai dans les plus brefs délais.</p>';
+            contactForm.reset();
+
+            // Remove the message after 5 seconds
+            setTimeout(() => {
+                formFeedback.innerHTML = '';
+            }, 5000);
+        });
+    </script>
+
+</body>
+</html>
