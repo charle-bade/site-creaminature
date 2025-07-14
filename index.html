@@ -54,15 +54,7 @@
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
-        /* NOUVEAU: Animation pour les images du portfolio */
-        #portfolio .card img {
-            transition: transform 0.4s ease-in-out, filter 0.4s ease-in-out;
-            filter: brightness(75%); /* Assombrit légèrement l'image par défaut */
-        }
-        #portfolio .card:hover img {
-            transform: scale(1.05); /* Zoom léger au survol */
-            filter: brightness(100%); /* L'image retrouve sa pleine luminosité */
-        }
+        /* Style pour l'animation du portfolio retiré, car géré par les classes Tailwind directement */
     </style>
 </head>
 <body class="antialiased">
@@ -96,17 +88,24 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="py-20 md:py-32 text-center">
-            <div class="container mx-auto px-6">
-                <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
-                    Des Miniatures YouTube Qui <span class="text-transparent bg-clip-text hero-gradient">Captivent</span>
-                </h1>
-                <p class="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8">
-                    Boostez vos vues et votre engagement avec des miniatures personnalisées, professionnelles et irrésistibles.
-                </p>
-                <div class="flex justify-center space-x-4">
-                    <a href="#services" class="btn btn-primary text-lg">Voir les offres</a>
-                    <a href="#portfolio" class="btn btn-secondary text-lg">Découvrir mon travail</a>
+        <section class="py-20 md:py-32">
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <!-- Colonne Texte -->
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
+                        Des Miniatures YouTube Qui <span class="text-transparent bg-clip-text hero-gradient">Captivent</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-400 max-w-xl mx-auto md:mx-0 mb-8">
+                        Boostez vos vues et votre engagement avec des miniatures personnalisées, professionnelles et irrésistibles.
+                    </p>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#services" class="btn btn-primary text-lg">Voir les offres</a>
+                        <a href="#portfolio" class="btn btn-secondary text-lg">Découvrir mon travail</a>
+                    </div>
+                </div>
+                <!-- Colonne GIF -->
+                <div class="flex justify-center items-center">
+                    <img src="https://media.giphy.com/media/l41YcGT5ShJa0T00U/giphy.gif" alt="Animation créative" class="rounded-lg shadow-2xl w-full max-w-sm">
                 </div>
             </div>
         </section>
@@ -227,24 +226,48 @@
         <section id="portfolio" class="py-20">
             <div class="container mx-auto px-6">
                 <h2 class="section-title">Mon Portfolio</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div class="card group">
-                        <img src="MINIATURE 2.png" alt="Exemple de miniature 1" class="w-full h-auto object-cover">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Portfolio Item 1 -->
+                    <div class="card group relative overflow-hidden rounded-xl">
+                        <img src="MINIATURE 2.png" alt="Exemple de miniature 1" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 flex items-center justify-center">
+                            <p class="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">Voir le Projet</p>
+                        </div>
                     </div>
-                    <div class="card group">
-                        <img src="Marie-Lou-Sciuba.jpg" alt="Exemple de miniature 2" class="w-full h-auto object-cover">
+                    <!-- Portfolio Item 2 -->
+                    <div class="card group relative overflow-hidden rounded-xl">
+                        <img src="Marie-Lou-Sciuba.jpg" alt="Exemple de miniature 2" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 flex items-center justify-center">
+                            <p class="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">Voir le Projet</p>
+                        </div>
                     </div>
-                    <div class="card group">
-                        <img src="Pourquoi-j’ai-quitté-la-France1.jpg" alt="Exemple de miniature 3" class="w-full h-auto object-cover">
+                    <!-- Portfolio Item 3 -->
+                    <div class="card group relative overflow-hidden rounded-xl">
+                        <img src="Pourquoi-j’ai-quitté-la-France1.jpg" alt="Exemple de miniature 3" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 flex items-center justify-center">
+                            <p class="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">Voir le Projet</p>
+                        </div>
                     </div>
-                    <div class="card group">
-                        <img src="SEO-Facile--5-Choses-à-Faire-Pour-Devenir-Visible-Rapidementa.jpg" alt="Exemple de miniature 4" class="w-full h-auto object-cover">
+                    <!-- Portfolio Item 4 -->
+                    <div class="card group relative overflow-hidden rounded-xl">
+                        <img src="SEO-Facile--5-Choses-à-Faire-Pour-Devenir-Visible-Rapidementa.jpg" alt="Exemple de miniature 4" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 flex items-center justify-center">
+                            <p class="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">Voir le Projet</p>
+                        </div>
                     </div>
-                    <div class="card group">
-                        <img src="royaume-du-kongo17.jpg" alt="Exemple de miniature 5" class="w-full h-auto object-cover">
+                    <!-- Portfolio Item 5 -->
+                    <div class="card group relative overflow-hidden rounded-xl">
+                        <img src="royaume-du-kongo17.jpg" alt="Exemple de miniature 5" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 flex items-center justify-center">
+                            <p class="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">Voir le Projet</p>
+                        </div>
                     </div>
-                    <div class="card group">
-                        <img src="voitute-audi-V1.jpg" alt="Miniature YouTube pour une voiture" class="w-full h-auto object-cover">
+                    <!-- Portfolio Item 6 -->
+                    <div class="card group relative overflow-hidden rounded-xl">
+                        <img src="voitute-audi-V1.jpg" alt="Miniature YouTube pour une voiture" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-60 transition-all duration-500 flex items-center justify-center">
+                            <p class="text-white text-xl font-bold opacity-0 group-hover:opacity-100 transition-opacity duration-500">Voir le Projet</p>
+                        </div>
                     </div>
                 </div>
             </div>
