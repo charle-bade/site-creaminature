@@ -9,10 +9,10 @@
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Google Fonts: Inter & Montserrat for portfolio text -->
+    <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -21,51 +21,41 @@
         /* Custom styles */
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #111827; /* Dark background */
-            color: #F3F4F6; /* Light text */
+            background-color: #111827;
+            color: #F3F4F6;
         }
         .hero-gradient {
-            background: linear-gradient(90deg, #4F46E5, #A855F7);
+            background: linear-gradient(90deg, #C026D3, #7C3AED);
         }
-        .section-title {
-            @apply text-3xl md:text-4xl font-bold text-center mb-12;
+        .btn-gradient {
+            background-image: linear-gradient(to right, #C026D3, #7C3AED);
+            transition: all 0.3s ease;
         }
-        .card {
-            @apply bg-gray-800 rounded-xl shadow-lg overflow-hidden flex flex-col;
-        }
-        .card-content {
-            @apply p-8 flex-grow flex flex-col;
-        }
-        .btn {
-            @apply px-6 py-3 rounded-lg font-semibold text-white transition-transform duration-300;
-        }
-        .btn-primary {
-            @apply bg-indigo-600 hover:bg-indigo-700;
-        }
-        .btn-secondary {
-            @apply bg-gray-700 hover:bg-gray-600;
+        .btn-gradient:hover {
+            background-image: linear-gradient(to right, #7C3AED, #C026D3);
+            transform: scale(1.05);
         }
         .input-field {
-            @apply w-full bg-white border border-gray-400 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-indigo-500;
+            @apply w-full bg-white border border-gray-400 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-purple-500;
         }
-        /* Styles for FAQ accordion */
         .faq-answer {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease-out;
         }
         
-        /* NOUVEAU: Animation pour le carrousel du portfolio */
+        /* Animation pour le carrousel du portfolio */
         @keyframes scroll {
             from { transform: translateX(0); }
             to { transform: translateX(-50%); }
         }
         .scroller {
             max-width: 100%;
+            overflow: hidden;
         }
         .scroller__inner {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             width: max-content;
             animation: scroll 40s linear infinite;
         }
@@ -87,14 +77,14 @@
     <header class="bg-gray-800/80 backdrop-blur-sm sticky top-0 z-50">
         <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-white">
-                <i class="fa-solid fa-wand-magic-sparkles text-indigo-400"></i> CréaMiniature
+                <i class="fa-solid fa-wand-magic-sparkles text-purple-400"></i> CréaMiniature
             </a>
             <div class="hidden md:flex items-center space-x-6">
                 <a href="#services" class="text-gray-300 hover:text-white transition-colors duration-300">Services</a>
                 <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors duration-300">Portfolio</a>
                 <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors duration-300">Témoignages</a>
                 <a href="#faq" class="text-gray-300 hover:text-white transition-colors duration-300">FAQ</a>
-                <a href="#contact" class="btn btn-primary">Contactez-moi</a>
+                <a href="#contact" class="px-6 py-3 rounded-lg font-semibold text-white btn-gradient">Contactez-moi</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-white">
                 <i class="fas fa-bars text-2xl"></i>
@@ -106,12 +96,12 @@
             <a href="#portfolio" class="block py-2 text-gray-300 hover:text-white">Portfolio</a>
             <a href="#testimonials" class="block py-2 text-gray-300 hover:text-white">Témoignages</a>
             <a href="#faq" class="block py-2 text-gray-300 hover:text-white">FAQ</a>
-            <a href="#contact" class="block mt-2 py-2 text-center btn btn-primary w-full">Contactez-moi</a>
+            <a href="#contact" class="block mt-2 py-2 text-center px-6 py-3 rounded-lg font-semibold text-white w-full btn-gradient">Contactez-moi</a>
         </div>
     </header>
 
     <main>
-        <!-- Hero Section (MODIFIÉ) -->
+        <!-- Hero Section -->
         <section class="py-20 md:py-32 text-center">
             <div class="container mx-auto px-6">
                 <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight mb-4">
@@ -121,8 +111,8 @@
                     Boostez vos vues et votre engagement avec des miniatures personnalisées, professionnelles et irrésistibles.
                 </p>
                 <div class="flex justify-center space-x-4">
-                    <a href="#services" class="btn btn-primary text-lg">Voir les offres</a>
-                    <a href="#portfolio" class="btn btn-secondary text-lg">Découvrir mon travail</a>
+                    <a href="#services" class="px-6 py-3 rounded-lg font-semibold text-white text-lg btn-gradient">Voir les offres</a>
+                    <a href="#portfolio" class="px-6 py-3 rounded-lg font-semibold transition-colors duration-300 bg-transparent border-2 border-gray-400 text-gray-300 hover:bg-gray-400 hover:text-gray-900 text-lg">Découvrir mon travail</a>
                 </div>
             </div>
         </section>
@@ -130,119 +120,63 @@
         <!-- Services Section -->
         <section id="services" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Mes Services</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Mes Services</h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Pricing Card 1 -->
-                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
-                        <div class="card-content">
-                            <i class="fas fa-star text-4xl text-indigo-400 mb-4"></i>
-                            <h3 class="text-2xl font-bold mb-2">Miniature Unique</h3>
-                            <p class="text-4xl font-bold my-4">15€</p>
-                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>1 Miniature HD</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Design 100% personnalisé</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>2 révisions incluses</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Livraison en 48h</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Miniature Unique">Commander</a>
-                            </div>
-                        </div>
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
+                        <h3 class="text-xl font-bold uppercase">Miniature Unique</h3>
+                        <p class="text-5xl font-extrabold my-4">15€</p>
+                        <p class="text-gray-400 mb-6 flex-grow">Idéal pour un besoin ponctuel.</p>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Miniature Unique">Commander</a>
                     </div>
                     <!-- Pricing Card 2 -->
-                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
-                         <div class="card-content">
-                            <i class="fas fa-lightbulb text-4xl text-indigo-400 mb-4"></i>
-                            <h3 class="text-2xl font-bold mb-2">Pack Découverte</h3>
-                            <p class="text-4xl font-bold my-4">40€</p>
-                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>3 Miniatures HD</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Design 100% personnalisé</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>3 révisions incluses</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Livraison en 72h</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Pack Découverte">Commander</a>
-                            </div>
-                        </div>
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
+                        <h3 class="text-xl font-bold uppercase">Pack Découverte</h3>
+                        <p class="text-5xl font-extrabold my-4">40€</p>
+                        <p class="text-gray-400 mb-6 flex-grow">Parfait pour lancer une série de vidéos.</p>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Pack Découverte">Commander</a>
                     </div>
                     <!-- Pricing Card 3 (Recommended) -->
-                    <div class="card text-center border-2 border-indigo-500 scale-105 relative">
-                        <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 bg-indigo-500 text-white text-sm font-bold px-3 py-1 rounded-full">POPULAIRE</span>
-                        <div class="card-content">
-                            <i class="fas fa-rocket text-4xl text-indigo-400 mb-4"></i>
-                            <h3 class="text-2xl font-bold mb-2">Pack Croissance</h3>
-                            <p class="text-4xl font-bold my-4">65€ <span class="text-lg text-gray-400 line-through">75€</span></p>
-                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>5 Miniatures HD</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Design 100% personnalisé</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Révisions illimitées</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Livraison prioritaire</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Pack Croissance">Commander</a>
-                            </div>
-                        </div>
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col border-2 border-purple-500 relative">
+                        <span class="absolute -top-4 left-1/2 -translate-x-1/2 px-3 py-1 text-sm font-semibold text-white rounded-full btn-gradient">POPULAIRE</span>
+                        <h3 class="text-xl font-bold uppercase">Pack Croissance</h3>
+                        <p class="text-5xl font-extrabold my-4">65€</p>
+                        <p class="text-gray-400 mb-6 flex-grow">Le meilleur rapport qualité-prix.</p>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Pack Croissance">Commander</a>
                     </div>
                     <!-- Pricing Card 4 -->
-                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
-                        <div class="card-content">
-                            <i class="fas fa-video text-4xl text-indigo-400 mb-4"></i>
-                            <h3 class="text-2xl font-bold mb-2">Abonnement Créateur</h3>
-                            <p class="text-4xl font-bold my-4">125€<span class="text-lg text-gray-400">/mois</span></p>
-                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>10 Miniatures / mois</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Charte graphique dédiée</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Support prioritaire</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Conseils A/B Testing</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Abonnement Créateur">Discutons-en</a>
-                            </div>
-                        </div>
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
+                        <h3 class="text-xl font-bold uppercase">Abonnement Créateur</h3>
+                        <p class="text-5xl font-extrabold my-4">125€<span class="text-2xl font-semibold text-gray-400">/mois</span></p>
+                        <p class="text-gray-400 mb-6 flex-grow">Pour les créateurs de contenu réguliers.</p>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Abonnement Créateur">Discutons-en</a>
                     </div>
                      <!-- Pricing Card 5 -->
-                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
-                        <div class="card-content">
-                            <i class="fas fa-crown text-4xl text-indigo-400 mb-4"></i>
-                            <h3 class="text-2xl font-bold mb-2">Abonnement Pro</h3>
-                            <p class="text-4xl font-bold my-4">250€<span class="text-lg text-gray-400">/mois</span></p>
-                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>20 Miniatures / mois</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Charte graphique dédiée</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Support VIP 24/7</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Fichiers sources inclus</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Abonnement Pro">Discutons-en</a>
-                            </div>
-                        </div>
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
+                        <h3 class="text-xl font-bold uppercase">Abonnement Pro</h3>
+                        <p class="text-5xl font-extrabold my-4">250€<span class="text-2xl font-semibold text-gray-400">/mois</span></p>
+                        <p class="text-gray-400 mb-6 flex-grow">La solution complète pour les chaînes en expansion.</p>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Abonnement Pro">Discutons-en</a>
                     </div>
                      <!-- Pricing Card 6 -->
-                    <div class="card text-center border-2 border-transparent hover:border-indigo-500">
-                        <div class="card-content">
-                            <i class="fas fa-building text-4xl text-indigo-400 mb-4"></i>
-                            <h3 class="text-2xl font-bold mb-2">Abonnement Agence</h3>
-                            <p class="text-4xl font-bold my-4">375€<span class="text-lg text-gray-400">/mois</span></p>
-                            <ul class="text-gray-400 space-y-2 mb-6 text-left">
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>30 Miniatures / mois</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Charte graphique dédiée</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Support VIP 24/7</li>
-                                <li><i class="fa-solid fa-check text-green-500 mr-2"></i>Analyse de performance</li>
-                            </ul>
-                            <div class="mt-auto">
-                                <a href="#contact" class="btn btn-primary w-full order-button" data-pack="Abonnement Agence">Discutons-en</a>
-                            </div>
-                        </div>
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
+                        <h3 class="text-xl font-bold uppercase">Abonnement Agence</h3>
+                        <p class="text-5xl font-extrabold my-4">375€<span class="text-2xl font-semibold text-gray-400">/mois</span></p>
+                        <p class="text-gray-400 mb-6 flex-grow">Pour les agences et les gros volumes.</p>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Abonnement Agence">Discutons-en</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio Section (MODIFIÉ) -->
-        <section id="portfolio" class="py-20">
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Mon Portfolio</h2>
+                <div class="text-center mb-16">
+                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Mon Portfolio</h2>
+                </div>
             </div>
             <div class="scroller" data-speed="slow">
                 <div class="scroller__inner">
@@ -266,11 +200,13 @@
         <!-- SECTION TÉMOIGNAGES -->
         <section id="testimonials" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Ce que disent mes clients</h2>
+                <div class="text-center mb-16">
+                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Ce que disent mes clients</h2>
+                </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Testimonial Card 1 -->
                     <div class="bg-gray-800 p-8 rounded-lg">
-                        <i class="fas fa-quote-left text-indigo-400 text-2xl mb-4"></i>
+                        <i class="fas fa-quote-left text-purple-400 text-2xl mb-4"></i>
                         <p class="text-gray-300 mb-6">“Commande rapide, répondant à ma demande, merci.”</p>
                         <div class="flex items-center">
                             <img src="https://placehold.co/40x40/E5E7EB/374151?text=S" alt="Avatar client" class="w-12 h-12 rounded-full mr-4">
@@ -282,7 +218,7 @@
                     </div>
                     <!-- Testimonial Card 2 -->
                     <div class="bg-gray-800 p-8 rounded-lg">
-                        <i class="fas fa-quote-left text-indigo-400 text-2xl mb-4"></i>
+                        <i class="fas fa-quote-left text-purple-400 text-2xl mb-4"></i>
                         <p class="text-gray-300 mb-6">“Super travail je recommande !”</p>
                         <div class="flex items-center">
                             <img src="https://placehold.co/40x40/E5E7EB/374151?text=P" alt="Avatar client" class="w-12 h-12 rounded-full mr-4">
@@ -294,7 +230,7 @@
                     </div>
                     <!-- Testimonial Card 3 -->
                     <div class="bg-gray-800 p-8 rounded-lg">
-                        <i class="fas fa-quote-left text-indigo-400 text-2xl mb-4"></i>
+                        <i class="fas fa-quote-left text-purple-400 text-2xl mb-4"></i>
                         <p class="text-gray-300 mb-6">“Excellent comme d’habitude 👌🏼”</p>
                         <div class="flex items-center">
                             <img src="https://placehold.co/40x40/E5E7EB/374151?text=H" alt="Avatar client" class="w-12 h-12 rounded-full mr-4">
@@ -309,9 +245,11 @@
         </section>
 
         <!-- SECTION: FAQ -->
-        <section id="faq" class="py-20">
+        <section id="faq" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6 max-w-3xl">
-                <h2 class="section-title">Questions Fréquemment Posées</h2>
+                <div class="text-center mb-16">
+                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Questions Fréquemment Posées</h2>
+                </div>
                 <div class="space-y-4">
                     <!-- FAQ Item 1 -->
                     <div class="bg-gray-800 rounded-lg">
@@ -360,7 +298,9 @@
         <!-- Contact Section -->
         <section id="contact" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
-                <h2 class="section-title">Prêt à booster vos vues ?</h2>
+                 <div class="text-center mb-16">
+                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Prêt à booster vos vues ?</h2>
+                </div>
                 <div class="max-w-2xl mx-auto">
                     <form action="https://formspree.io/f/xyzpgnab" method="POST" class="space-y-6">
                         <div>
@@ -388,7 +328,7 @@
                             <textarea id="message" name="message" rows="4" required class="input-field"></textarea>
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="btn btn-primary text-lg w-full md:w-auto">Envoyer ma demande</button>
+                            <button type="submit" class="px-6 py-3 rounded-lg font-semibold text-white text-lg w-full md:w-auto btn-gradient">Envoyer ma demande</button>
                         </div>
                     </form>
                     
@@ -397,7 +337,7 @@
                         <span class="flex-shrink mx-4 text-gray-400">ou</span>
                         <div class="flex-grow border-t border-gray-600"></div>
                     </div>
-                    <a href="https://wa.me/2290169284952" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full btn bg-green-600 hover:bg-green-700">
+                    <a href="https://wa.me/2290169284952" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full px-6 py-3 rounded-lg font-semibold transition-colors duration-300 bg-green-600 text-white hover:bg-green-700">
                         <i class="fab fa-whatsapp text-2xl mr-3"></i>
                         Contactez-moi sur WhatsApp
                     </a>
