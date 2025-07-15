@@ -35,9 +35,6 @@
             background-image: linear-gradient(to right, #7C3AED, #C026D3);
             transform: scale(1.05);
         }
-        .input-field {
-            @apply w-full bg-white border border-gray-400 rounded-lg px-4 py-3 text-black focus:outline-none focus:ring-2 focus:ring-purple-500;
-        }
         .faq-answer {
             max-height: 0;
             overflow: hidden;
@@ -67,6 +64,33 @@
             width: auto;
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+
+        .gradient-border-title {
+            background-image: linear-gradient(90deg, #C026D3, #7C3AED);
+            @apply p-1 rounded-xl inline-block;
+        }
+        .gradient-border-title h2 {
+            background-color: #1F2937; 
+            @apply px-6 py-2 rounded-lg text-2xl md:text-3xl font-bold;
+        }
+
+        /* STYLE POUR LE FORMULAIRE */
+        .form-input {
+            @apply w-full bg-gray-100 border-gray-300 rounded-md px-4 py-2 text-black focus:outline-none focus:ring-2 focus:ring-purple-500;
+        }
+        /* MODIFIÉ: Couleur du texte des labels en noir */
+        .form-label {
+            display: block;
+            font-size: 0.875rem; /* 14px */
+            line-height: 1.25rem; /* 20px */
+            font-weight: 500;
+            color: #000000;
+            margin-bottom: 0.25rem;
+        }
+        .form-input::placeholder {
+            color: #9CA3AF; /* Gris pour le texte d'exemple */
+            opacity: 1;
         }
 
     </style>
@@ -123,49 +147,59 @@
                 <div class="text-center mb-16">
                     <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Mes Services</h2>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Pricing Card 1 -->
-                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <!-- Offer 1: Miniature Unique -->
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col border border-gray-700">
                         <h3 class="text-xl font-bold uppercase">Miniature Unique</h3>
-                        <p class="text-5xl font-extrabold my-4">15€</p>
-                        <p class="text-gray-400 mb-6 flex-grow">Idéal pour un besoin ponctuel.</p>
-                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Miniature Unique">Commander</a>
+                        <p class="text-5xl font-extrabold my-4">25€</p>
+                        <p class="text-gray-400 mb-6 flex-grow">Parfait pour débuter avec une miniature professionnelle qui capte l'attention de votre audience.</p>
+                        <ul class="text-gray-300 space-y-3 mb-8">
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>1 miniature personnalisée</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>2 concepts au choix</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Texte accrocheur intégré</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>1 révision incluse</li>
+                        </ul>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button bg-gray-700 hover:bg-gray-600 transition-colors" data-pack="Miniature Unique">Commander maintenant</a>
                     </div>
-                    <!-- Pricing Card 2 -->
-                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
+                    <!-- Offer 2: Pack Découverte -->
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col border border-gray-700">
                         <h3 class="text-xl font-bold uppercase">Pack Découverte</h3>
-                        <p class="text-5xl font-extrabold my-4">40€</p>
-                        <p class="text-gray-400 mb-6 flex-grow">Parfait pour lancer une série de vidéos.</p>
-                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Pack Découverte">Commander</a>
-                    </div>
-                    <!-- Pricing Card 3 (Recommended) -->
-                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col border-2 border-purple-500 relative">
-                        <span class="absolute -top-4 left-1/2 -translate-x-1/2 px-3 py-1 text-sm font-semibold text-white rounded-full btn-gradient">POPULAIRE</span>
-                        <h3 class="text-xl font-bold uppercase">Pack Croissance</h3>
                         <p class="text-5xl font-extrabold my-4">65€</p>
-                        <p class="text-gray-400 mb-6 flex-grow">Le meilleur rapport qualité-prix.</p>
-                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Pack Croissance">Commander</a>
+                        <p class="text-gray-400 mb-6 flex-grow">Idéal pour tester notre service avec 3 miniatures cohérentes pour votre chaîne YouTube.</p>
+                        <ul class="text-gray-300 space-y-3 mb-8">
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>3 miniatures professionnelles</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Charte graphique personnalisée</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>2 révisions par miniature</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Livraison chaque 24h max</li>
+                        </ul>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button bg-gray-700 hover:bg-gray-600 transition-colors" data-pack="Pack Découverte">Je découvre</a>
                     </div>
-                    <!-- Pricing Card 4 -->
-                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
-                        <h3 class="text-xl font-bold uppercase">Abonnement Créateur</h3>
-                        <p class="text-5xl font-extrabold my-4">125€<span class="text-2xl font-semibold text-gray-400">/mois</span></p>
-                        <p class="text-gray-400 mb-6 flex-grow">Pour les créateurs de contenu réguliers.</p>
-                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Abonnement Créateur">Discutons-en</a>
+                    <!-- Offer 3: Pack Croissance (POPULAIRE) -->
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col border-2 border-purple-500 relative transform md:scale-105">
+                        <span class="absolute top-0 -translate-y-1/2 left-1/2 -translate-x-1/2 px-3 py-1 text-sm font-semibold text-white rounded-full btn-gradient">POPULAIRE</span>
+                        <h3 class="text-xl font-bold uppercase">Pack Croissance</h3>
+                        <p class="text-5xl font-extrabold my-4">140€</p>
+                        <p class="text-gray-400 mb-6 flex-grow">Pour les créateurs qui veulent accélérer leur croissance avec des miniatures impactantes.</p>
+                        <ul class="text-gray-300 space-y-3 mb-8">
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>7 miniatures créatives</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Identité visuelle complète</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Révisions illimitées</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Livraison chaque 24h max</li>
+                        </ul>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Pack Croissance">Booster ma chaîne</a>
                     </div>
-                     <!-- Pricing Card 5 -->
-                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
+                    <!-- Offer 4: Abonnement Pro -->
+                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col border border-gray-700">
                         <h3 class="text-xl font-bold uppercase">Abonnement Pro</h3>
-                        <p class="text-5xl font-extrabold my-4">250€<span class="text-2xl font-semibold text-gray-400">/mois</span></p>
-                        <p class="text-gray-400 mb-6 flex-grow">La solution complète pour les chaînes en expansion.</p>
-                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Abonnement Pro">Discutons-en</a>
-                    </div>
-                     <!-- Pricing Card 6 -->
-                    <div class="bg-gray-800 p-8 rounded-2xl flex flex-col">
-                        <h3 class="text-xl font-bold uppercase">Abonnement Agence</h3>
-                        <p class="text-5xl font-extrabold my-4">375€<span class="text-2xl font-semibold text-gray-400">/mois</span></p>
-                        <p class="text-gray-400 mb-6 flex-grow">Pour les agences et les gros volumes.</p>
-                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button btn-gradient" data-pack="Abonnement Agence">Discutons-en</a>
+                        <p class="text-5xl font-extrabold my-4">199€<span class="text-2xl font-semibold text-gray-400">/mois</span></p>
+                        <p class="text-gray-400 mb-6 flex-grow">Solution complète pour YouTubeurs professionnels avec besoins intensifs.</p>
+                        <ul class="text-gray-300 space-y-3 mb-8">
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>15 miniatures par mois</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Concepts exclusifs originaux</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Révisions illimitées</li>
+                            <li><i class="fa-solid fa-check text-purple-400 mr-2"></i>Livraison chaque 24h max</li>
+                        </ul>
+                        <a href="#contact" class="w-full mt-auto py-3 px-6 rounded-lg font-semibold text-center text-white order-button bg-gray-700 hover:bg-gray-600 transition-colors" data-pack="Abonnement Pro">Devenir Pro</a>
                     </div>
                 </div>
             </div>
@@ -175,7 +209,9 @@
         <section id="portfolio" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Mon Portfolio</h2>
+                    <div class="gradient-border-title">
+                        <h2>Mon Portfolio</h2>
+                    </div>
                 </div>
             </div>
             <div class="scroller" data-speed="slow">
@@ -201,7 +237,9 @@
         <section id="testimonials" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Ce que disent mes clients</h2>
+                    <div class="gradient-border-title">
+                        <h2>Ce que disent mes clients</h2>
+                    </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Testimonial Card 1 -->
@@ -248,7 +286,9 @@
         <section id="faq" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6 max-w-3xl">
                 <div class="text-center mb-16">
-                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Questions Fréquemment Posées</h2>
+                    <div class="gradient-border-title">
+                        <h2>Questions Fréquemment Posées</h2>
+                    </div>
                 </div>
                 <div class="space-y-4">
                     <!-- FAQ Item 1 -->
@@ -299,48 +339,51 @@
         <section id="contact" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                  <div class="text-center mb-16">
-                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Prêt à booster vos vues ?</h2>
+                    <div class="gradient-border-title">
+                        <h2>Détails de la commande</h2>
+                    </div>
                 </div>
-                <div class="max-w-2xl mx-auto">
-                    <form action="https://formspree.io/f/xyzpgnab" method="POST" class="space-y-6">
-                        <div>
-                            <label for="pack-select" class="block text-sm font-medium text-gray-300 mb-1">Offre demandée</label>
-                            <select id="pack-select" name="Pack" required class="input-field">
-                                <option value="" disabled>Sélectionnez une offre...</option>
-                                <option value="Miniature Unique">Miniature Unique - 15€</option>
-                                <option value="Pack Découverte">Pack Découverte - 40€</option>
-                                <option value="Pack Croissance">Pack Croissance - 65€</option>
-                                <option value="Abonnement Créateur">Abonnement Créateur - 125€/mois</option>
-                                <option value="Abonnement Pro">Abonnement Pro - 250€/mois</option>
-                                <option value="Abonnement Agence">Abonnement Agence - 375€/mois</option>
-                            </select>
+                <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
+                    <form action="https://formspree.io/f/xyzpgnab" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Colonne de gauche -->
+                        <div class="space-y-6">
+                            <div>
+                                <label for="pack-select" class="form-label">Offre demandée <span class="text-red-500">*</span></label>
+                                <select id="pack-select" name="Pack" required class="form-input">
+                                    <option value="" disabled>Sélectionnez une offre...</option>
+                                    <option value="Miniature Unique">Miniature Unique - 25€</option>
+                                    <option value="Pack Découverte">Pack Découverte - 65€</option>
+                                    <option value="Pack Croissance">Pack Croissance - 140€</option>
+                                    <option value="Abonnement Pro">Abonnement Pro - 199€/mois</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="name" class="form-label">Nom complet <span class="text-red-500">*</span></label>
+                                <input type="text" id="name" name="name" required class="form-input" placeholder="Ex: Jean Dupont">
+                            </div>
+                            <div>
+                                <label for="email" class="form-label">Email <span class="text-red-500">*</span></label>
+                                <input type="email" id="email" name="_replyto" required class="form-input" placeholder="Ex: jean.dupont@email.com">
+                            </div>
+                             <div>
+                                <label for="channel" class="form-label">Nom de votre chaîne YouTube (facultatif)</label>
+                                <input type="text" id="channel" name="channel" class="form-input" placeholder="Ex: Ma Super Chaîne">
+                            </div>
                         </div>
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Nom</label>
-                            <input type="text" id="name" name="name" required class="input-field">
+                        
+                        <!-- Colonne de droite -->
+                        <div class="space-y-6">
+                            <div>
+                                <label for="message" class="form-label">Informations complémentaires</label>
+                                <textarea id="message" name="message" rows="8" class="form-input" placeholder="Décrivez votre besoin, vos idées, les textes à inclure, etc."></textarea>
+                            </div>
                         </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                            <input type="email" id="email" name="_replyto" required class="input-field">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Votre message</label>
-                            <textarea id="message" name="message" rows="4" required class="input-field"></textarea>
-                        </div>
-                        <div class="text-center">
-                            <button type="submit" class="px-6 py-3 rounded-lg font-semibold text-white text-lg w-full md:w-auto btn-gradient">Envoyer ma demande</button>
+
+                        <!-- Bouton d'envoi centré -->
+                        <div class="md:col-span-2 text-center mt-6">
+                            <button type="submit" class="px-8 py-4 rounded-lg font-bold text-white text-lg w-full md:w-auto btn-gradient">Envoyer ma demande</button>
                         </div>
                     </form>
-                    
-                    <div class="my-6 flex items-center justify-center">
-                        <div class="flex-grow border-t border-gray-600"></div>
-                        <span class="flex-shrink mx-4 text-gray-400">ou</span>
-                        <div class="flex-grow border-t border-gray-600"></div>
-                    </div>
-                    <a href="https://wa.me/2290169284952" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center w-full px-6 py-3 rounded-lg font-semibold transition-colors duration-300 bg-green-600 text-white hover:bg-green-700">
-                        <i class="fab fa-whatsapp text-2xl mr-3"></i>
-                        Contactez-moi sur WhatsApp
-                    </a>
                 </div>
             </div>
         </section>
