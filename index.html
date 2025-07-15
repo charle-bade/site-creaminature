@@ -66,20 +66,10 @@
             box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
         }
 
-        .gradient-border-title {
-            background-image: linear-gradient(90deg, #C026D3, #7C3AED);
-            @apply p-1 rounded-xl inline-block;
-        }
-        .gradient-border-title h2 {
-            background-color: #1F2937; 
-            @apply px-6 py-2 rounded-lg text-2xl md:text-3xl font-bold;
-        }
-
         /* STYLE POUR LE FORMULAIRE */
         .form-input {
             @apply w-full bg-gray-100 border-gray-300 rounded-md px-4 py-2 text-black focus:outline-none focus:ring-2 focus:ring-purple-500;
         }
-        /* MODIFIÉ: Couleur du texte des labels en noir */
         .form-label {
             display: block;
             font-size: 0.875rem; /* 14px */
@@ -108,7 +98,7 @@
                 <a href="#portfolio" class="text-gray-300 hover:text-white transition-colors duration-300">Portfolio</a>
                 <a href="#testimonials" class="text-gray-300 hover:text-white transition-colors duration-300">Témoignages</a>
                 <a href="#faq" class="text-gray-300 hover:text-white transition-colors duration-300">FAQ</a>
-                <a href="#contact" class="px-6 py-3 rounded-lg font-semibold text-white btn-gradient">Contactez-moi</a>
+                <a href="https://wa.me/2290169284952" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg font-semibold text-white btn-gradient">Contactez-moi</a>
             </div>
             <button id="mobile-menu-button" class="md:hidden text-white">
                 <i class="fas fa-bars text-2xl"></i>
@@ -120,7 +110,7 @@
             <a href="#portfolio" class="block py-2 text-gray-300 hover:text-white">Portfolio</a>
             <a href="#testimonials" class="block py-2 text-gray-300 hover:text-white">Témoignages</a>
             <a href="#faq" class="block py-2 text-gray-300 hover:text-white">FAQ</a>
-            <a href="#contact" class="block mt-2 py-2 text-center px-6 py-3 rounded-lg font-semibold text-white w-full btn-gradient">Contactez-moi</a>
+            <a href="https://wa.me/2290169284952" target="_blank" rel="noopener noreferrer" class="block mt-2 py-2 text-center px-6 py-3 rounded-lg font-semibold text-white w-full btn-gradient">Contactez-moi</a>
         </div>
     </header>
 
@@ -209,9 +199,7 @@
         <section id="portfolio" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <div class="gradient-border-title">
-                        <h2>Mon Portfolio</h2>
-                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Mon Portfolio</h2>
                 </div>
             </div>
             <div class="scroller" data-speed="slow">
@@ -237,46 +225,29 @@
         <section id="testimonials" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-16">
-                    <div class="gradient-border-title">
-                        <h2>Ce que disent mes clients</h2>
-                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Ce que disent mes clients</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                     <!-- Testimonial Card 1 -->
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <i class="fas fa-quote-left text-purple-400 text-2xl mb-4"></i>
-                        <p class="text-gray-300 mb-6">“Commande rapide, répondant à ma demande, merci.”</p>
-                        <div class="flex items-center">
-                            <img src="https://placehold.co/40x40/E5E7EB/374151?text=S" alt="Avatar client" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <h4 class="font-bold text-white">Shiatsushi</h4>
-                                <p class="text-sm text-gray-400">Client satisfait</p>
-                            </div>
-                        </div>
+                    <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-2xl text-center">
+                        <img src="https://placehold.co/80x80/E5E7EB/374151?text=S" alt="Avatar client" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-purple-400">
+                        <h4 class="font-bold text-white text-lg">Shiatsushi</h4>
+                        <p class="text-sm text-gray-400 mb-4">Client satisfait</p>
+                        <p class="text-gray-300">“Commande rapide, répondant à ma demande, merci.”</p>
                     </div>
                     <!-- Testimonial Card 2 -->
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <i class="fas fa-quote-left text-purple-400 text-2xl mb-4"></i>
-                        <p class="text-gray-300 mb-6">“Super travail je recommande !”</p>
-                        <div class="flex items-center">
-                            <img src="https://placehold.co/40x40/E5E7EB/374151?text=P" alt="Avatar client" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <h4 class="font-bold text-white">Pierre6</h4>
-                                <p class="text-sm text-gray-400">Client satisfait</p>
-                            </div>
-                        </div>
+                    <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-2xl text-center">
+                        <img src="https://placehold.co/80x80/E5E7EB/374151?text=P" alt="Avatar client" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-purple-400">
+                        <h4 class="font-bold text-white text-lg">Pierre6</h4>
+                        <p class="text-sm text-gray-400 mb-4">Client satisfait</p>
+                        <p class="text-gray-300">“Super travail je recommande !”</p>
                     </div>
                     <!-- Testimonial Card 3 -->
-                    <div class="bg-gray-800 p-8 rounded-lg">
-                        <i class="fas fa-quote-left text-purple-400 text-2xl mb-4"></i>
-                        <p class="text-gray-300 mb-6">“Excellent comme d’habitude 👌🏼”</p>
-                        <div class="flex items-center">
-                            <img src="https://placehold.co/40x40/E5E7EB/374151?text=H" alt="Avatar client" class="w-12 h-12 rounded-full mr-4">
-                            <div>
-                                <h4 class="font-bold text-white">HananeHNweek</h4>
-                                <p class="text-sm text-gray-400">Cliente satisfaite</p>
-                            </div>
-                        </div>
+                    <div class="bg-white/10 backdrop-blur-lg border border-white/20 p-8 rounded-2xl text-center">
+                        <img src="https://placehold.co/80x80/E5E7EB/374151?text=H" alt="Avatar client" class="w-20 h-20 rounded-full mx-auto mb-4 border-2 border-purple-400">
+                        <h4 class="font-bold text-white text-lg">HananeHNweek</h4>
+                        <p class="text-sm text-gray-400 mb-4">Cliente satisfaite</p>
+                        <p class="text-gray-300">“Excellent comme d’habitude 👌🏼”</p>
                     </div>
                 </div>
             </div>
@@ -286,9 +257,7 @@
         <section id="faq" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6 max-w-3xl">
                 <div class="text-center mb-16">
-                    <div class="gradient-border-title">
-                        <h2>Questions Fréquemment Posées</h2>
-                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Questions Fréquemment Posées</h2>
                 </div>
                 <div class="space-y-4">
                     <!-- FAQ Item 1 -->
@@ -339,9 +308,7 @@
         <section id="contact" class="py-20 bg-gray-900">
             <div class="container mx-auto px-6">
                  <div class="text-center mb-16">
-                    <div class="gradient-border-title">
-                        <h2>Détails de la commande</h2>
-                    </div>
+                    <h2 class="text-2xl md:text-3xl font-bold inline-block px-8 py-3 rounded-xl shadow-lg text-white btn-gradient">Détails de la commande</h2>
                 </div>
                 <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-lg">
                     <form action="https://formspree.io/f/xyzpgnab" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6">
